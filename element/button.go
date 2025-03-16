@@ -19,7 +19,12 @@ type Button struct {
 	Type           string `attr:"type"`
 	Value          string `attr:"value"`
 	Count          int    `attr:"count"`
-	Children       faces.Element
+	Children       ButtonChild
+}
+
+type ButtonChild interface {
+	faces.Element
+	CanBeButtonChild()
 }
 
 func (b Button) HTML() string {
@@ -35,9 +40,5 @@ func (b Button) CHILDREN() string {
 }
 
 func (b Button) VALIDATE() bool {
-	//	Check if the button has a DIV element as a child
-	if (Div{} == b.Children) {
-		return true
-	}
-	return false
+	return true
 }
