@@ -7,6 +7,7 @@ import (
 )
 
 type Button struct {
+	Class          string `attr:"class"`
 	Autofocus      bool   `attr:"autofocus"`
 	Disabled       bool   `attr:"disabled"`
 	Form           string `attr:"form"`
