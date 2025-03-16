@@ -4,4 +4,5 @@ type Element interface {
 	HTML() string
 	ATTRIBUTES() string
 	CHILDREN() string
+	VALIDATE() bool
 }

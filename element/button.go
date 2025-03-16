@@ -33,3 +33,11 @@ func (b Button) ATTRIBUTES() string {
 func (b Button) CHILDREN() string {
 	return parse.GetChild(b.Children)
 }
+
+func (b Button) VALIDATE() bool {
+	//	Check if the button has a DIV element as a child
+	if Div{} == b.Children {
+		return true
+	}
+
+}

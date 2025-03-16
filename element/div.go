@@ -22,3 +22,8 @@ func (d Div) ATTRIBUTES() string {
 func (d Div) CHILDREN() string {
 	return parse.GetChild(d.Children)
 }
+
+func (d Div) VALIDATE() bool {
+	//	Check if the button has a DIV element as a child
+	return true
+}
