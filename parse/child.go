@@ -11,7 +11,15 @@ func GetChild(children faces.Element) string {
 	return children.HTML()
 }
 
-func GetGroupChildren(children []faces.Element) string {
+func GetChildren[T faces.Element](children []T) string {
+	var html string
+	for _, child := range children {
+		html += GetChild(child)
+	}
+	return html
+}
+
+func GetGroupChildren[T faces.Element](children []T) string {
 	var html string
 	for _, child := range children {
 		html += GetChild(child)

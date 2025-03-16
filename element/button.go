@@ -19,7 +19,7 @@ type Button struct {
 	Type           string `attr:"type"`
 	Value          string `attr:"value"`
 	Count          int    `attr:"count"`
-	Children       ButtonChild
+	Children       []ButtonChild
 }
 
 type ButtonChild interface {
@@ -36,7 +36,7 @@ func (b Button) ATTRIBUTES() string {
 }
 
 func (b Button) CHILDREN() string {
-	return parse.GetChild(b.Children)
+	return parse.GetChildren(b.Children)
 }
 
 func (b Button) VALIDATE() bool {

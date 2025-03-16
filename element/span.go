@@ -8,7 +8,7 @@ import (
 
 type Span struct {
 	Class    string `attr:"class"`
-	Children faces.Element
+	Children []faces.Element
 }
 
 func (s Span) HTML() string {
@@ -20,11 +20,10 @@ func (s Span) ATTRIBUTES() string {
 }
 
 func (s Span) CHILDREN() string {
-	return parse.GetChild(s.Children)
+	return parse.GetChildren(s.Children)
 }
 
 func (s Span) VALIDATE() bool {
-	//	Check if the button has a DIV element as a child
 	return true
 }
 

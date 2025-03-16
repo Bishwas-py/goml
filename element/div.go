@@ -8,7 +8,7 @@ import (
 
 type Div struct {
 	Class    string `attr:"class"`
-	Children faces.Element
+	Children []faces.Element
 }
 
 func (d Div) HTML() string {
@@ -20,7 +20,7 @@ func (d Div) ATTRIBUTES() string {
 }
 
 func (d Div) CHILDREN() string {
-	return parse.GetChild(d.Children)
+	return parse.GetChildren(d.Children)
 }
 
 func (d Div) VALIDATE() bool {
