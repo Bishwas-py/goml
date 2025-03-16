@@ -37,3 +37,5 @@ func (b Button) CHILDREN() string {
 func (b Button) VALIDATE() bool {
 	return true
 }
+
+func (b Button) CanBeFormChild() {}

@@ -11,3 +11,8 @@ type ButtonChild interface {
 	Element
 	CanBeButtonChild()
 }
+
+type FormChild interface {
+	Element
+	CanBeFormChild()
+}

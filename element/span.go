@@ -28,3 +28,4 @@ func (s Span) VALIDATE() bool {
 }
 
 func (s Span) CanBeButtonChild() {}
+func (s Span) CanBeFormChild()   {}

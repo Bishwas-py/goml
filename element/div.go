@@ -27,3 +27,5 @@ func (d Div) VALIDATE() bool {
 	//	Check if the button has a DIV element as a child
 	return true
 }
+
+func (d Div) CanBeFormChild() {}
