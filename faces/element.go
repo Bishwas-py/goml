@@ -6,3 +6,8 @@ type Element interface {
 	CHILDREN() string
 	VALIDATE() bool
 }
+
+type ButtonChild interface {
+	Element
+	CanBeButtonChild()
+}

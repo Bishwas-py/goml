@@ -19,12 +19,7 @@ type Button struct {
 	Type           string `attr:"type"`
 	Value          string `attr:"value"`
 	Count          int    `attr:"count"`
-	Children       []ButtonChild
-}
-
-type ButtonChild interface {
-	faces.Element
-	CanBeButtonChild()
+	Children       []faces.ButtonChild
 }
 
 func (b Button) HTML() string {

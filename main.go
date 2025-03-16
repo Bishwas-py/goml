@@ -10,9 +10,12 @@ func main() {
 	button := element.Button{
 		Disabled: true,
 		Count:    2,
-		Children: []element.ButtonChild{
+		Children: []faces.ButtonChild{
 			element.Span{
 				Class: "bg-red-500 h-7 w-7",
+				Children: []faces.Element{
+					element.T("Hello"),
+				},
 			},
 		},
 	}
