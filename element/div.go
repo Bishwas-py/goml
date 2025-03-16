@@ -7,7 +7,7 @@ import (
 )
 
 type Div struct {
-	Class    string
+	Class    string `attr:"class"`
 	Children faces.Element
 }
 

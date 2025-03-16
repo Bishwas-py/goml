@@ -11,7 +11,7 @@ func main() {
 		Disabled: true,
 		Count:    2,
 		Children: element.Group{
-			Tag:   "div",
+			Tag:   "span",
 			Class: "flex gap-2",
 			Children: []faces.Element{
 				element.Div{

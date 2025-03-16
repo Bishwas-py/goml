@@ -14,6 +14,11 @@ type Group struct {
 	Children []faces.Element
 }
 
+func (d Group) VALIDATE() bool {
+	//TODO implement me
+	panic("implement me")
+}
+
 func (d Group) HTML() string {
 	if d.Tag == "" {
 		return fmt.Sprintf(d.CHILDREN())

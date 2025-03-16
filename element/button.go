@@ -36,8 +36,8 @@ func (b Button) CHILDREN() string {
 
 func (b Button) VALIDATE() bool {
 	//	Check if the button has a DIV element as a child
-	if Div{} == b.Children {
+	if (Div{} == b.Children) {
 		return true
 	}
-
+	return false
 }
